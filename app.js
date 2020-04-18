@@ -2,7 +2,8 @@ new Vue({
     el:"#vue_app",
     data: {
         message : "hello world",
-        name : "Tawin "
+        name : "Tawin ",
+        website:'www.tawim.com'
     },
     methods:{
         getName:function(){

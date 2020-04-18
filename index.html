@@ -9,7 +9,9 @@
     </head>
     <body>
         <div class="" id="vue_app">
-            {{setName('tp')}} 
+            <h1>{{name}} </h1>
+            <h1>web : <a  v-bind:href="website" target="blank">{{website}}</a></h1>
+            <input type="text" name="" v-bind:value="name">
         </div>
         <script src="app.js" charset="utf-8"></script>
     </body>
