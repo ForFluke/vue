@@ -7,7 +7,8 @@ new Vue({
         age:'25',
         count:'0',
         test_array:[],
-        sex:''
+        sex:'',
+        job:''
     },
     methods:{
         getName:function(){
