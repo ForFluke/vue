@@ -10,11 +10,21 @@
     <body>
         <div class="" id="vue_app">
             Name : <input type="text" value="" v-model="name">
+            <br>
+            <input type="checkbox" value="1"  v-model="test_array">
+            <label>Test a</label>
+            <input type="checkbox" value="2"  v-model="test_array">
+            <label>Test b</label>
+            <input type="checkbox" value="3" v-model="test_array">
+            <label>Test c</label>
             <hr>
             <h1>name : {{name}} </h1>
             <h1>age  :{{age}} </h1>
             <h1>count  :{{count}} </h1>
             <h1>web : <a  v-bind:href="website" target="blank">{{website}}</a></h1>
+            <br> <br>
+            <h1>array check box {{test_array}}</h1>
+
             <hr>
             <input type="text" name="" v-bind:value="name">
             <input type="text" name="count_name" id="count_name"  v-on:keyup="addCount()" value="">

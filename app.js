@@ -6,6 +6,7 @@ new Vue({
         website:'www.tawim.com',
         age:'25',
         count:'0',
+        test_array:[]
     },
     methods:{
         getName:function(){
