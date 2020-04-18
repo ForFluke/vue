@@ -9,45 +9,19 @@
     </head>
     <body>
         <div class="" id="vue_app">
-            Name : <input type="text" value="" v-model="name">
-            <br>
-            <input type="checkbox" value="1"  v-model="test_array">
-            <label>Test a</label>
-            <input type="checkbox" value="2"  v-model="test_array">
-            <label>Test b</label>
-            <input type="checkbox" value="3" v-model="test_array">
-            <label>Test c</label>
-            <br>
-            <input type="radio" value="male" v-model="sex">
-            <label>ช</label>
-            <input type="radio" value="female" v-model="sex">
-            <label>ญ</label>
-            <hr>
-            <select name="job" v-model='job'>
-                <option>select 1</option>
-                <option>select 2</option>
-                <option>select 3</option>
-                <option>select 4</option>
-                <option>select 5</option>
-            </select>           
-            <hr>
-            <h1>name : {{name}} </h1>
-            <h1>age  :{{age}} </h1>
-            <h1>count  :{{count}} </h1>
-            <h1>web : <a  v-bind:href="website" target="blank">{{website}}</a></h1>
-            <br> <br>
-            <h1>array check box {{test_array}}</h1>
-            <hr>
-            <h1>show selecxt sex : {{sex}}</h1>
-            <hr>
-            <h1>job selecxt  : {{job}}</h1>
-            <hr>
-            <input type="text" name="" v-bind:value="name">
-            <input type="text" name="count_name" id="count_name"  v-on:keyup="addCount()" value="">
+            <button type="button" name="like_button" v-on:click="eventChange()"> like</button>
 
-            <button type="button" name="button" v-on:click="addAge()">Add</button>
-            <button type="button" name="button"  v-on:click="subtractAge()">subtract</button>
-
+            <h1 v-if="like">Hello</h1>
+            <hr>
+            <h1>{{array_product_list[0]}}</h1>
+            <hr>
+            <ul>
+                <li v-for="result in array_product_list">{{result}}</li>
+            </ul>
+            <hr>
+            <ul>
+                <li v-for="result in employee">{{result.name}}</li>
+            </ul>
         </div>
         <script src="app.js" charset="utf-8"></script>
     </body>

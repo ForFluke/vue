@@ -1,34 +1,29 @@
 new Vue({
     el:"#vue_app",
     data: {
-        message : "hello world",
-        name : "Tawin ",
-        website:'www.tawim.com',
-        age:'25',
-        count:'0',
-        test_array:[],
-        sex:'',
-        job:''
+        like:false,
+        array_product_list:['product1','product2','product3','product4','product5','product6','product7'],
+        employee:[
+            {
+                name:'A',age:20,status:false
+            },{
+                name:'B',age:25,status:false
+            },{
+                name:'C',age:30,status:true
+            },{
+                name:'D',age:35,status:true
+            },{
+                name:'E',age:40,status:true
+            },
+        ]
     },
     methods:{
-        getName:function(){
-            return this.name;
-        },
-        setName:function(n){
-            return this.name = n;
-        },
-        addAge:function(){
-            this.age++;
-            console.log( this.age);
-        },
-        subtractAge:function(){
-            this.age--;
-            console.log( this.age);
-        },
-        addCount:function(){
-            this.count++;
-            console.log('count'+this.count);
-
+        eventChange:function(){
+            if( this.like == true){
+                this.like = false
+            }else{
+                this.like = true
+            }
         }
     }
 })
