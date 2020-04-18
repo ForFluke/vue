@@ -17,6 +17,11 @@
             <label>Test b</label>
             <input type="checkbox" value="3" v-model="test_array">
             <label>Test c</label>
+            <br>
+            <input type="radio" value="male" v-model="sex">
+            <label>ช</label>
+            <input type="radio" value="female" v-model="sex">
+            <label>ญ</label>
             <hr>
             <h1>name : {{name}} </h1>
             <h1>age  :{{age}} </h1>
@@ -24,7 +29,8 @@
             <h1>web : <a  v-bind:href="website" target="blank">{{website}}</a></h1>
             <br> <br>
             <h1>array check box {{test_array}}</h1>
-
+            <hr>
+            <h1>show selecxt sex : {{sex}}</h1>
             <hr>
             <input type="text" name="" v-bind:value="name">
             <input type="text" name="count_name" id="count_name"  v-on:keyup="addCount()" value="">
