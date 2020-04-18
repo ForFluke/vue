@@ -4,7 +4,8 @@ new Vue({
         message : "hello world",
         name : "Tawin ",
         website:'www.tawim.com',
-        age:'25'
+        age:'25',
+        count:'0',
     },
     methods:{
         getName:function(){
@@ -20,6 +21,11 @@ new Vue({
         subtractAge:function(){
             this.age--;
             console.log( this.age);
+        },
+        addCount:function(){
+            this.count++;
+            console.log('count'+this.count);
+
         }
     }
 })
