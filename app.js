@@ -3,7 +3,8 @@ new Vue({
     data: {
         message : "hello world",
         name : "Tawin ",
-        website:'www.tawim.com'
+        website:'www.tawim.com',
+        age:'25'
     },
     methods:{
         getName:function(){
@@ -11,6 +12,14 @@ new Vue({
         },
         setName:function(n){
             return this.name = n;
+        },
+        addAge:function(){
+            this.age++;
+            console.log( this.age);
+        },
+        subtractAge:function(){
+            this.age--;
+            console.log( this.age);
         }
     }
 })
