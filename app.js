@@ -1,54 +1,30 @@
-new Vue({
-    el:"#vue_app",
+var post = new Vue({
+    el:"#show_post",
     data: {
-      newData:{
-          empName:'',
-          salary: 0
-      },
-      empGroup:[
-        {
-            empName:  'mr.A',
-            salary: 5000
-        },
-        {
-            empName:  'mr.B',
-            salary: 6000
-        }
-      ]
+        title:'event post title',
+        message:'message post'
     },
     methods:{
-        appEmp:function(){
-            this.empGroup.push(
-                {
-                    empName:this.newData.empName,
-                    salary : this.newData.salary
-                }
-              
-            );
-            this.newData.empName = '';
-            this.newData.salary = 0;
-        },
-        showMessage:function(){
-            console.log('save');
-            
-        }
+       
+    }
+});
+var comment = new Vue({
+    el:"#show_comment",
+    data: {
+        comment_test : 'test comment nana'
     },
-    computed:{
-        sumation:function(){
-            var sum = this.empGroup.reduce(function(value , data){
-                return value + Number(data.salary);
-            },0);
-            return sum ;
-        },
-        avg:function(){
-            var sum = this.empGroup.reduce(function(value , data){
-                return value + Number(data.salary);
-            },0);
-            return sum /this.empGroup.length;
-        }
-    },watch:{
-        sumation:function(){
-            this.showMessage();
+    methods:{
+       
+    }
+});
+var action = new Vue({
+    el:"#show_action",
+    data: {
+        like:false
+    },
+    methods:{
+        changeLike:function(){
+           this.like = !this.like;
         }
     }
 })

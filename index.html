@@ -8,22 +8,16 @@
 
     </head>
     <body>
-        <div class="" id="vue_app">
-            <span>Name :</span>
-            <input type="text" v-model="newData.empName">
-            <span>salary :</span>
-            <input type="text" v-model="newData.salary">
-           <br> <br>
-           <button @click="appEmp">Save</button>
-
-           <span>sum salary :</span>
-           <span>salary : {{sumation}}</span> |  <span>AVG : {{avg}}</span>
-           <br>
-           <ul>
-               <li v-for="emp in empGroup">
-                    {{emp.empName}} | salary = {{emp.salary}}
-               </li>
-           </ul>
+        <div class="" id="show_post">
+        <h1>{{title}}</h1>
+        <h1>{{message}}</h1>
+        </div>
+        <div class="" id="show_comment">
+            <textarea name="" id="" cols="30" rows="10">{{comment_test}}</textarea>
+        </div>
+        <div class="" id="show_action">
+           <button type="button" name="like" v-on:click="changeLike()"> like</button>
+           {{like}}
         </div>
         <script src="app.js" charset="utf-8"></script>
     </body>
