@@ -9,19 +9,18 @@
     </head>
     <body>
         <div class="" id="vue_app">
-            <button type="button" name="like_button" v-on:click="eventChange()"> like</button>
-
-            <h1 v-if="like">Hello</h1>
-            <hr>
-            <h1>{{array_product_list[0]}}</h1>
-            <hr>
-            <ul>
-                <li v-for="result in array_product_list">{{result}}</li>
-            </ul>
-            <hr>
-            <ul>
-                <li v-for="result in employee">{{result.name}}</li>
-            </ul>
+            <span>Name :</span>
+            <input type="text" v-model="newData.empName">
+            <span>salary :</span>
+            <input type="text" v-model="newData.salary">
+           <br> <br>
+           <button @click="appEmp">Save</button>
+           <br>
+           <ul>
+               <li v-for="emp in empGroup">
+                    {{emp.empName}} | salary = {{emp.salary}}
+               </li>
+           </ul>
         </div>
         <script src="app.js" charset="utf-8"></script>
     </body>
