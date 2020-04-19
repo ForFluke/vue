@@ -28,5 +28,13 @@ new Vue({
             this.newData.empName = '';
             this.newData.salary = 0;
         }
+    },
+    computed:{
+        sumation:function(){
+            var sum = this.empGroup.reduce(function(value , data){
+                return value + Number(data.salary);
+            },0);
+            return sum;
+        }
     }
 })
