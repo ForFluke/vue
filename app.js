@@ -1,30 +1,20 @@
 
-Vue.component('tawin',{
-    data:function(){
-        return{
-            count:0
-        }
-    },
-    template:'<button v-on:click="count++">click : {{count}}</button>'
-});
-
-Vue.component('post',{
-    props:['title'],
-    template:'<h3>{{title}}</h3>'
-});
-Vue.component('showview',{
-    props:{
-        t_name:{
-            type:String,
-            required:true
-        },
-        view:{
-            type:Number,
-            default:0
-        }
-    },
-    template:'<h3>{{t_name}} | {{view}}</h3>'
-});
+Vue.component('showcomment',{
+    props:['comment'],
+    template:'<h3 style="color: #F44336">{{comment}}</h3>'
+})
 new Vue({
-    el:"#show_post"
+    el:"#show_post",
+    data:{
+        newComment:'',
+        comment:[
+            'a','b','c'
+        ]
+    },
+    methods:{
+        addComment:function(){
+            this.comment.push(this.newComment)
+            this.newComment = ''
+        }
+    }
 });

@@ -9,10 +9,10 @@
     </head>
     <body>
         <div class="" id="show_post">
-            <tawin></tawin>
-            <post title="test post"></post>
-            <showview t_name="vdo_name" v-bind:view="100"></showview>
-            <showview t_name="new vdo_name" ></showview>
+            <input type="text" v-model="newComment" v-on:keyup.enter="addComment">
+            <ul>
+                <li v-for="comments in comment" is="showcomment" v-bind:comment="comments"></li>
+            </ul>
         </div>
         <script src="app.js" charset="utf-8"></script>
     </body>
