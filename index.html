@@ -9,11 +9,15 @@
     </head>
     <body>
         <div class="" id="show_post">
-            <input type="text" v-model="newComment" v-on:keyup.enter="addComment">
-            <ul>
-                <li v-for="comments in comment" is="showcomment" v-bind:comment="comments"></li>
-            </ul>
+            <food-app></food-app>
         </div>
+        <template id="foodarea">
+            <div id="food">
+                <h3>a</h3> <h3>a</h3>
+                <h3>B</h3>
+                <h3>C</h3>
+            </div>
+        </template>
         <script src="app.js" charset="utf-8"></script>
     </body>
 
